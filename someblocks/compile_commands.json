@@ -1,0 +1,13 @@
+[
+  {
+    "file": "someblocks.c",
+    "arguments": [
+      "/usr/bin/cc",
+      "someblocks.c",
+      "-o",
+      "someblocks"
+    ],
+    "directory": "/home/t3chj4ck/someblocks",
+    "output": "someblocks"
+  }
+]
