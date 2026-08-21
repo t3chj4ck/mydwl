@@ -117,11 +117,10 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "tofi", NULL };
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: 2 -> at, etc. */
 	/* modifier                  key                  function          argument */
-	{ MODKEY,                    XKB_KEY_r,           spawn,            {.v = menucmd} },
+	{ MODKEY,                    XKB_KEY_r,           spawn,            SHCMD("tofi-run | bash") },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,      spawn,            {.v = termcmd} },
 	{ MODKEY, XKB_KEY_v, spawn, SHCMD("cliphist list | tofi | cliphist decode | wl-copy")},
 	{ 0, XKB_KEY_Print, spawn, SHCMD("/home/t3chj4ck/script/screen_shot.sh")},
